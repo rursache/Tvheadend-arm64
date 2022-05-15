@@ -12,13 +12,13 @@ git clone https://github.com/tvheadend/tvheadend &&
 cd tvheadend &&
 sudo apt update && sudo apt upgrade -y &&
 sudo apt install ffmpeg ccache debhelper gettext libavahi-client-dev liburiparser-dev cmake libpcre2-dev libpcre3-dev libdvbcsa-dev -y &&
-AUTOBUILD_CONFIGURE_EXTRA="--enable-ccache" ./Autobuild.sh -t raspbianbuster-armhf
+AUTOBUILD_CONFIGURE_EXTRA="--enable-ccache --build=arm64" ./Autobuild.sh -t raspbianbuster-armhf
 ```
 The result .deb file will be in `~/Downloads`
 
 **NOTES**:
-- If you don't want **ffmpeg** add `--disable-ffmpeg_static` in `AUTOBUILD_CONFIGURE_EXTRA` and don't apt install it
-- If you don't want **ccache**, remove it from `AUTOBUILD_CONFIGURE_EXTRA` and don't apt install it
+- If you don't want **ffmpeg**, replace `--build=arm64` with `--disable-ffmpeg_static` in `AUTOBUILD_CONFIGURE_EXTRA`
+- If you don't want **ccache**, remove `--enable-ccache` from `AUTOBUILD_CONFIGURE_EXTRA`
 
 ## Installing
 Run sudo `dpkg -i <FILE>.deb` and follow the install script.
