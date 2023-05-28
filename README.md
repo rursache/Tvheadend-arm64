@@ -1,6 +1,10 @@
 # Tvheadend-arm64
 The easy way to compile Tvheadend on Raspberry Pi (arm64)
 
+> **Note**
+>
+> I **strongly** recommend you to use [this docker image](https://hub.docker.com/r/linuxserver/tvheadend) instead of trying to compile this yourself. The below instructions should work but they are not tested anymore and no new releases will be provided
+
 ## Requirements
 - 2GB+ Raspberry Pi (add swap space if needed)
 - 1.5GB+ free space
